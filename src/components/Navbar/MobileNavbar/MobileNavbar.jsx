@@ -1,15 +1,13 @@
 import styles from './MobileNavbar.module.css';
 
-import NavbarButtons from '../NavbarButtons/NavbarButtons';
+import logoFmei from '../../../assets/imgs/logo-transp-fmei.png';
 
-function MobileNavbar({showInputFileBox, showCalendarBox, backToHome}){
+function MobileNavbar(){
     return(
         <nav className={styles.mobileNavbar}>
-            <NavbarButtons 
-                showInputFileBox={showInputFileBox}
-                showCalendarBox={showCalendarBox}
-                backToHome={backToHome}
-            />
+            <figure>
+                <img src={logoFmei} alt="Logo do FacilitaMEI" />
+            </figure>
         </nav>
     )
 };

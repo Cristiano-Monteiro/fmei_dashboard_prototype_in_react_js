@@ -1,6 +1,6 @@
 import styles from './OpeningScreen.module.css';
 
-import logoFmei from '../../assets/imgs/logo-transp-fmei.png';
+import logoFmei from '../../../assets/imgs/logo-transp-fmei.png';
 
 function OpeningScreen(){
     function closeOpeningScreen(e){

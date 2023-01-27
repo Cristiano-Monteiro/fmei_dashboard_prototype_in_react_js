@@ -1,6 +1,17 @@
+import Container from './components/Layout/Container/Container';
+
+import OpeningScreen from './components/ModalBoxes/OpeningScreen/OpeningScreen';
+import MainNavbar from './components/Navbar/MainNavbar/MainNavbar';
+import MobileNavbar from './components/Navbar/MobileNavbar/MobileNavbar';
+
 function App() {
   return (
-    <h1>Project</h1>
+    <Container>
+      <OpeningScreen/>
+      <MobileNavbar/>
+      {/* = Main Content = */}
+      <MainNavbar/>
+    </Container>
   );
 };
 

@@ -1,15 +1,21 @@
 .mobileNavbar{
     width: 100vw;
-    height: 5rem;
+    height: 4rem;
     background-color: var(--main-color);
     display: flex;
     align-items: center;
     padding: 1.5rem;
-
     z-index: 1;
+}
 
-/*     position: absolute;
-    bottom: 0%; */
+.mobileNavbar figure{
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+}
+
+.mobileNavbar figure img{
+    width: 100%;
 }
 
 @media screen and (min-width: 805px) {

@@ -2,7 +2,7 @@ import styles from './MainNavbar.module.css';
 
 import NavbarButtons from '../NavbarButtons/NavbarButtons';
 
-import logoFmei from '../../assets/imgs/logo-transp-fmei.png';
+import logoFmei from '../../../assets/imgs/logo-transp-fmei.png';
 
 function MainNavbar({showInputFileBox, showCalendarBox, backToHome}){
     return(
