@@ -1,0 +1,51 @@
+.mainNavbar{
+    width: 100vw;
+    height: 5rem;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.mainNavbar figure{
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+}
+
+.mainNavbar figure img{
+    width: 100%;
+}
+
+.navbarButtons{
+    display: none;
+    width: 80%;
+    height: 100%;
+}
+
+@media screen and (min-width: 805px){
+    .mainNavbar{
+        width: 8rem;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .mainNavbar figure::after{
+        content: '';
+        display: block;
+        width: 6rem;
+        height: .2rem;
+        background-color: #fff;
+        position: absolute;
+        bottom: -1rem;
+        left: -1rem;
+        border-radius: 5rem;
+    }
+
+    .navbarButtons{
+        display: flex;
+    }
+}

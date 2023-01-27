@@ -1,0 +1,88 @@
+.inputFileBoxContainer{
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputFileBoxContent{
+    width: 80%;
+    max-width: 30rem;
+    height: 20rem;
+    padding: 1rem;
+    border-radius: var(--main-border-radius);
+    background-color: var(--main-color);
+    animation: inputFileBoxAnimation .5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+/*== Icons styles ==*/
+
+.uploadFileIcon{
+    width: 65%;
+    max-width: 10rem;
+    display: flex;
+    justify-content: center;
+    animation: inputFileBoxAnimation .8s ease-in-out;
+    position: absolute;
+    top: -4rem;
+}
+
+.uploadFileIcon img{
+    width: 100%;
+}
+
+.attachFileAddIcon{
+    width: 20%;
+    margin-left: .5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.attachFileAddIcon img{
+    width: 100%;
+}
+
+/*==================*/
+
+.inputFileBoxContent h2{
+    color: #fff;
+    text-align: center;
+    border-bottom: 2px solid;
+}
+
+.inputContainer{
+    background-color: var(--secondary-color);
+    border-radius: var(--main-border-radius);
+    display: flex;
+    align-items: center;
+    width: 70%;
+    max-width: 17rem;
+}
+
+.inputContainer input{
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--main-border-radius);
+    color: #fff;
+    width: 100%;
+}
+
+@keyframes inputFileBoxAnimation {
+    from{
+        opacity: 0;
+        transform: translate(0, -3rem);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

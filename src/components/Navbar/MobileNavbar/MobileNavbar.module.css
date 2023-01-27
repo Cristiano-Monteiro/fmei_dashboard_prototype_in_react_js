@@ -1,0 +1,19 @@
+.mobileNavbar{
+    width: 100vw;
+    height: 5rem;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+
+    z-index: 1;
+
+/*     position: absolute;
+    bottom: 0%; */
+}
+
+@media screen and (min-width: 805px) {
+    .mobileNavbar{
+        display: none;
+    }
+}

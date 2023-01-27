@@ -1,0 +1,74 @@
+.navbarButtons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navbarButtons li{
+    cursor: pointer;
+    width: 4.5rem;
+    height: 100%;
+    padding: .6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbarButtons li img{
+    width: 100%;
+    animation: btnAnimation .5s ease-in-out;
+}
+
+.navbarButtons li img:hover{
+    animation: btnAnimation .5s ease-in-out;
+}
+
+.navbarButtons li:active{
+    animation: btnAnimation .2s ease-in-out;
+}
+
+.navbarButtons li:hover{
+    background-color: var(--secondary-color);
+}
+
+@keyframes btnAnimation{
+    0%{
+        transform: translateY(0px);    
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes btnAnimationDesktop {
+    0%{
+        transform: translateX(0px);    
+    }
+    50%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (min-width: 805px) {
+    .navbarButtons{
+        flex-direction: column;
+        justify-content: start;
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .navbarButtons li{
+        width: 100%;
+        height: auto;
+    }
+
+    .navbarButtons li:active{
+        animation: btnAnimationDesktop .25s ease-in-out;
+    }
+}

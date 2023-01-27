@@ -1,0 +1,103 @@
+.openingScreenContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--main-color);
+    z-index: 2;
+    transition: transform .6s ease-in-out;
+}
+
+.openingScreenContent{
+    width: 80%;
+    max-width: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.openingScreenContent figure{
+    width: 65%;
+    opacity: 0;
+    animation: animationOpeningScreenContent .7s ease-in-out .5s forwards;
+}
+
+.openingScreenContent figure img{
+    width: 100%;
+}
+
+.openingScreenContent h1{
+    color: #fff;
+    font-size: 10vw;
+    opacity: 0;
+    animation: animationOpeningScreenContent .7s ease-in-out 1s forwards;
+}
+
+.openingScreenContainer button{
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-size: 5vw;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--main-border-radius);
+    width: 38vw;
+    max-width: 9rem;
+    height: 18vw;
+    max-height: 4rem;
+
+    position: absolute;
+    bottom: 2rem;
+
+    opacity: 0;
+    animation: animationOpeningScreenContent .7s ease-in-out 1.25s forwards;
+}
+
+@keyframes animationOpeningScreenContent {
+    from{
+        transform: translateX(-2rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 370px) {
+    .openingScreenContent h1{
+        font-size: 2rem;
+    }
+
+    .openingScreenContainer button{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 805px) {
+    .openingScreenContainer{
+        gap: 4.5rem;
+    }
+
+    .openingScreenContent{
+        max-width: 30rem;
+        flex-direction: row;
+    }
+
+    .openingScreenContent h1{
+        font-size: 2.5rem;
+    }
+
+    .openingScreenContainer button{
+        position: static;
+        transition: .3s ease-in-out;
+    }
+
+    .openingScreenContainer button:hover{
+        color: var(--secondary-color);
+        background-color: #fff;
+    }
+}

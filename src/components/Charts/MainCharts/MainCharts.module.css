@@ -1,0 +1,92 @@
+.chartContainer{
+    width: 100%;
+    height: 100%;
+    min-height: 30rem;
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    color: #555;
+}
+
+.text img{
+    height: 90%;
+    min-height: 2rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.charts{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 1.2rem;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.charts::-webkit-scrollbar{
+    display: none;
+}
+
+.chart{
+    display: flex;
+    min-width: 80%;
+    height: 100%;
+    text-align: center;
+    border-radius: var(--main-border-radius);
+    background-color: #fff;
+
+    scroll-snap-align: center;
+}
+
+.chart:first-child{
+    margin-left: 10vw;
+}
+
+.chart:last-child{
+    margin-right: 10vw;
+}
+
+@media screen and (min-width: 805px) {
+    .chartContainer{
+        padding: 0;
+        padding-top: .5rem;
+    }
+
+    .charts{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .8rem;
+        padding: 0 1rem 1rem 1rem;
+        overflow-y: auto;
+    }
+
+    .chart{
+        width: 49%;
+        min-width: 0;
+        height: 60%;
+    }
+
+    .chart:first-child{
+        margin-left: 0;
+    }
+    
+    .chart:last-child{
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1124px) {
+    .chart{
+        height: 90%;
+    }
+}
