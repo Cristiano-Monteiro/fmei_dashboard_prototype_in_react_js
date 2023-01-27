@@ -1,6 +1,6 @@
 import styles from './CalendarBox.module.css';
 
-import dateRangeIcon from '../../assets/icons/date_range_icon.svg';
+import dateRangeIcon from '../../../assets/icons/date_range_icon.svg';
 
 function CalendarBox(){
     return(

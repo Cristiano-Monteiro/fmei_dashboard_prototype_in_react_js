@@ -1,7 +1,7 @@
 import styles from './MainContent.module.css';
 
-import FinancialInformation from '../FinancialInformation/FinancialInformation';
-import MainCharts from '../MainCharts/MainCharts';
+import FinancialInformation from '../../Charts/FinancialInformation/FinancialInformation';
+import MainCharts from '../../Charts/MainCharts/MainCharts';
 
 function MainContent(){
     return(

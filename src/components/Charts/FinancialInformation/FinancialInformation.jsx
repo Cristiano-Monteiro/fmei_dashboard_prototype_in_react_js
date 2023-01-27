@@ -1,10 +1,10 @@
 import styles from './FinancialInformation.module.css';
 
-import statsIcon from '../../assets/icons/query_stats.svg';
+import statsIcon from '../../../assets/icons/query_stats.svg';
 
-import attachMoneyIcon from '../../assets/icons/FinancialInformationIcons/attach_money_icon.svg';
-import moneyOffIcon from '../../assets/icons/FinancialInformationIcons/money_off_icon.svg';
-import balanceIcon from '../../assets/icons/FinancialInformationIcons/balance_icon.svg';
+import attachMoneyIcon from '../../../assets/icons/FinancialInformationIcons/attach_money_icon.svg';
+import moneyOffIcon from '../../../assets/icons/FinancialInformationIcons/money_off_icon.svg';
+import balanceIcon from '../../../assets/icons/FinancialInformationIcons/balance_icon.svg';
 
 import FinancialChart from '../FinancialChart/FinancialChart';
 

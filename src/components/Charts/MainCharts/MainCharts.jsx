@@ -1,9 +1,9 @@
-import Highcharts from 'highcharts'
-import HighchartsReact from 'highcharts-react-official'
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 import styles from './MainCharts.module.css';
 
-import barChartIcon from '../../assets/icons/bar_chart.svg';
+import barChartIcon from '../../../assets/icons/bar_chart.svg';
 
 import chartList from '../ChartExamples/ChartExamples';
 

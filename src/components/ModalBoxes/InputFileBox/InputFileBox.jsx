@@ -1,7 +1,7 @@
 import styles from './InputFileBox.module.css';
 
-import uploadFileIcon from '../../assets/icons/upload_file_icon.svg';
-import attachFileAddIcon from '../../assets/icons/attach_file_add_icon.svg';
+import uploadFileIcon from '../../../assets/icons/upload_file_icon.svg';
+import attachFileAddIcon from '../../../assets/icons/attach_file_add_icon.svg';
 
 function InputFileBox(){
     return(
