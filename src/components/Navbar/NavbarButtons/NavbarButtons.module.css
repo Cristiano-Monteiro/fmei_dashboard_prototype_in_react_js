@@ -6,9 +6,9 @@
 
 .navbarButtons li{
     cursor: pointer;
-    width: 4rem;
+    width: 5rem;
     height: 100%;
-    padding: .6rem;
+    padding: .8rem;
     display: flex;
     justify-content: center;
 }
@@ -50,12 +50,12 @@
     .navbarButtons{
         flex-direction: column;
         justify-content: start;
+        align-items: center;
         gap: 2rem;
         margin-top: 2.5rem;
     }
 
     .navbarButtons li{
-        width: 100%;
         height: auto;
         border-radius: 50%;
     }

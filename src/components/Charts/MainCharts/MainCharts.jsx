@@ -8,8 +8,6 @@ import barChartIcon from '../../../assets/icons/bar_chart.svg';
 import chartList from '../ChartExamples/ChartExamples';
 
 function MainCharts(){
-    console.log(chartList);
-
     return(
         <>
             <section className={styles.chartContainer}>

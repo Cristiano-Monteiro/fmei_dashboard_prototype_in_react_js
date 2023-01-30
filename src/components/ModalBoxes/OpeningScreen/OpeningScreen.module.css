@@ -13,7 +13,7 @@
 
 .openingScreenContent{
     width: 80%;
-    max-width: 17rem;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +46,7 @@
     border: none;
     border-radius: var(--main-border-radius);
     width: 38vw;
-    max-width: 9rem;
+    max-width: 8rem;
     height: 18vw;
     max-height: 4rem;
 
@@ -55,6 +55,11 @@
 
     opacity: 0;
     animation: animationOpeningScreenContent .7s ease-in-out 1.25s forwards;
+}
+
+.openingScreenContainer button:hover{
+    color: var(--secondary-color);
+    background-color: #fff;
 }
 
 @keyframes animationOpeningScreenContent {
@@ -69,11 +74,11 @@
 
 @media screen and (min-width: 370px) {
     .openingScreenContent h1{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .openingScreenContainer button{
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -83,21 +88,16 @@
     }
 
     .openingScreenContent{
-        max-width: 30rem;
+        max-width: 32rem;
         flex-direction: row;
     }
 
     .openingScreenContent h1{
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
 
     .openingScreenContainer button{
         position: static;
         transition: .3s ease-in-out;
-    }
-
-    .openingScreenContainer button:hover{
-        color: var(--secondary-color);
-        background-color: #fff;
     }
 }

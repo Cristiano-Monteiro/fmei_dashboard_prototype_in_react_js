@@ -1,6 +1,6 @@
 .mainNavbar{
     width: 100vw;
-    height: 4rem;
+    height: 6rem;
     background-color: var(--main-color);
     display: flex;
     align-items: center;
@@ -11,8 +11,8 @@
 
 .mainNavbar figure{
     display: none;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     position: relative;
 }
 
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: 805px){
     .mainNavbar{
-        width: 7rem;
+        width: 7.5rem;
         height: 100%;
         flex-direction: column;
         justify-content: center;
@@ -47,8 +47,8 @@
         background-color: #fff;
         position: absolute;
         bottom: -1rem;
-        left: -1rem;
-        border-radius: 5rem;
+        left: -.5rem;
+        border-radius: 6rem;
     }
 
     .navbarButtons{

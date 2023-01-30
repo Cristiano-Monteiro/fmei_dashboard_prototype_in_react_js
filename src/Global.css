@@ -7,13 +7,17 @@
 }
 
 :root{
-    font-size: 16px;
+    font-size: 62.5%;  /* == 10px */
 
     /*== project colors ==*/
     --main-color: #0B0F99;
     --secondary-color: #1016E0;
 
-    --main-border-radius: 1.5rem;
+    --main-border-radius: 2rem;
+}
+
+body{
+    font-size: 1.6rem; /* == 16px */
 }
 
 body, html{
