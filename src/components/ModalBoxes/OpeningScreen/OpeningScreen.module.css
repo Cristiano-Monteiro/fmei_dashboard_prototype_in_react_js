@@ -39,15 +39,21 @@
 
 .openingScreenContainer .startButton{
     cursor: pointer;
+    border: none;
+    background-color: var(--main-color);
     border-radius: var(--main-border-radius);
     width: 10rem;
-    height: 7rem;
-    padding: 0 1.5rem;
+    height: 8rem;
     position: absolute;
     bottom: 2rem;
     opacity: 0;
     transition: opacity .5s ease-in-out;
     animation: buttonBouncing 1s ease-out 1s alternate infinite;
+    overflow: hidden;
+}
+
+.openingScreenContainer .startButton img{
+    width: 100%;
 }
 
 .openingScreenContainer .startButton:hover{
@@ -93,7 +99,7 @@
     .openingScreenContainer .startButton{
         position: static;
         transition: .3s ease-in-out;
-        width: 8rem;
-        height: 5rem;
+        width: 7rem;
+        height: 6rem;
     }
 }
