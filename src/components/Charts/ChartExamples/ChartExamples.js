@@ -53,11 +53,8 @@ const pie_chart_data = [{
 }];
 
 const options1 = generate_options_for_chart('bar', chart_data);
-
 const options2 = generate_options_for_chart('line', chart_data);
-
 const options3 = generate_options_for_chart('column', chart_data);
-
 const options4 = generate_options_for_chart('pie', pie_chart_data);
 
 /*======================*/
