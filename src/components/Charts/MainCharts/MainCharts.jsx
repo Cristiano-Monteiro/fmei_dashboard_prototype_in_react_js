@@ -1,5 +1,7 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import highchartsExporting from "highcharts/modules/exporting";
+highchartsExporting(Highcharts);
 
 import styles from './MainCharts.module.css';
 

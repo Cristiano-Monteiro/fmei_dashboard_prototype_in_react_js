@@ -1,7 +1,8 @@
 .mainContent{
     width: 100%;
     height: 100%;
-    background-color: #ddd;
+    /* background-color: #ddd; */
+    background-color: #CED1E2;
     display: flex;
     flex-direction: column;
     overflow-y: auto;

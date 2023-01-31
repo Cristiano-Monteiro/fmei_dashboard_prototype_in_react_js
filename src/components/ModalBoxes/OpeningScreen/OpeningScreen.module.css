@@ -37,29 +37,21 @@
     animation: animationOpeningScreenContent .7s ease-in-out 1s forwards;
 }
 
-.openingScreenContainer button{
-    background-color: var(--secondary-color);
-    color: #fff;
-    font-size: 5vw;
-    font-weight: bold;
+.openingScreenContainer .startButton{
     cursor: pointer;
-    border: none;
     border-radius: var(--main-border-radius);
-    width: 38vw;
-    max-width: 8rem;
-    height: 18vw;
-    max-height: 4rem;
-
+    width: 10rem;
+    height: 7rem;
+    padding: 0 1.5rem;
     position: absolute;
     bottom: 2rem;
-
     opacity: 0;
-    animation: animationOpeningScreenContent .7s ease-in-out 1.25s forwards;
+    transition: opacity .5s ease-in-out;
+    animation: buttonBouncing 1s ease-out 1s alternate infinite;
 }
 
-.openingScreenContainer button:hover{
-    color: var(--secondary-color);
-    background-color: #fff;
+.openingScreenContainer .startButton:hover{
+    background-color: var(--secondary-color);
 }
 
 @keyframes animationOpeningScreenContent {
@@ -72,13 +64,15 @@
     }
 }
 
+@keyframes buttonBouncing {
+    to{
+        transform: translateY(-2rem);
+    }
+}
+
 @media screen and (min-width: 370px) {
     .openingScreenContent h1{
         font-size: 3rem;
-    }
-
-    .openingScreenContainer button{
-        font-size: 1.6rem;
     }
 }
 
@@ -96,8 +90,10 @@
         font-size: 2.7rem;
     }
 
-    .openingScreenContainer button{
+    .openingScreenContainer .startButton{
         position: static;
         transition: .3s ease-in-out;
+        width: 8rem;
+        height: 5rem;
     }
 }
