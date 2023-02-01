@@ -2,6 +2,8 @@ import styles from './CalendarBox.module.css';
 
 import dateRangeIcon from '../../../assets/icons/date_range_icon.svg';
 
+import doneIcon from '../../../assets/icons/done_outline_icon.svg';
+
 function CalendarBox(){
     return(
         <div className={styles.calendarBoxContainer}>
@@ -11,10 +13,12 @@ function CalendarBox(){
                 </figure>
                 <h2>Filtre suas informações</h2>
                 <div className={styles.inputDateContainer}>
-                    <form>
+                    <form action='#' method='post'>
                         <input type="date" name="inputDateStart" id="inputDateStart" />
                         <input type="date" name="inputDateEnd" id="inputDateEnd" />
-                        <input type="submit" value="Enviar" />
+                        <button type="submit">
+                            <img src={doneIcon} alt="Ícone de finalizar ou terminar uma ação" />
+                        </button>
                     </form>
                 </div>
             </div>
