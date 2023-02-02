@@ -26,8 +26,6 @@ function NavbarButtons({showInputFileBox, showCalendarBox, backToHome}){
         }
     ];
 
-    console.log(navbarButtonsData);
-
     return(
         <ul className={styles.navbarButtons}>
             {navbarButtonsData.map((data) => {

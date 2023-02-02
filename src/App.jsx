@@ -13,6 +13,7 @@ import CalendarBox from './components/ModalBoxes/CalendarBox/CalendarBox';
 function App() {
   const [inputFileBox, setInputFileBox] = useState(false);
   const [calendarBox, setCalendarBox] = useState(false);
+  const [mainContent, setMainContent] = useState(false);
 
   function showInputFileBox(){
     setInputFileBox(!inputFileBox);
@@ -29,11 +30,15 @@ function App() {
     setCalendarBox(false);
   };
 
+  const showMainContent = () => setMainContent(true);
+
   return (
     <Container>
-      <OpeningScreen/>
+      <OpeningScreen 
+        showMainContent={showMainContent}
+      />
       <MobileNavbar/>
-      <MainContent/>
+      {mainContent && <MainContent/>}
       <MainNavbar
         showInputFileBox={showInputFileBox}
         showCalendarBox={showCalendarBox}

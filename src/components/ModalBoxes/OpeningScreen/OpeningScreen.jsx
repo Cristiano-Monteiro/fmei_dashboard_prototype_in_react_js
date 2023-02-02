@@ -4,9 +4,10 @@ import logoFmei from '../../../assets/imgs/logo-transp-fmei.png';
 
 import upArrowIcon from '../../../assets/icons/up_arrow_icon.svg';
 
-function OpeningScreen(){
-    function closeOpeningScreen(){
+function OpeningScreen({ showMainContent }){
+    const closeOpeningScreen = () => {
         document.getElementById('openingScreen').style.transform = 'translateY(-100vh)';
+        showMainContent();
     };
 
     setTimeout(() => {
