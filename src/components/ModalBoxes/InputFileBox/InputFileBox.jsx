@@ -3,6 +3,7 @@ import styles from './InputFileBox.module.css';
 import uploadFileIcon from '../../../assets/icons/upload_file_icon.svg';
 import attachFileAddIcon from '../../../assets/icons/attach_file_add_icon.svg';
 import doneIcon from '../../../assets/icons/done_outline_icon.svg';
+import backIcon from '../../../assets/icons/arrow_back_icon.svg';
 
 function InputFileBox(){
     return(

@@ -3,6 +3,7 @@ import styles from './CalendarBox.module.css';
 import dateRangeIcon from '../../../assets/icons/date_range_icon.svg';
 
 import doneIcon from '../../../assets/icons/done_outline_icon.svg';
+import backIcon from '../../../assets/icons/arrow_back_icon.svg';
 
 function CalendarBox(){
     return(
