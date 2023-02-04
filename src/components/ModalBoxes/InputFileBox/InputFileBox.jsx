@@ -1,17 +1,19 @@
 import styles from './InputFileBox.module.css';
 
+import BackButton from '../../Layout/BackButton/BackButton';
+
 import uploadFileIcon from '../../../assets/icons/upload_file_icon.svg';
 import attachFileAddIcon from '../../../assets/icons/attach_file_add_icon.svg';
 import doneIcon from '../../../assets/icons/done_outline_icon.svg';
-import backIcon from '../../../assets/icons/arrow_back_icon.svg';
 
-function InputFileBox(){
+function InputFileBox({ backToHome }){
     return(
         <div className={styles.inputFileBoxContainer}>
             <div className={styles.inputFileBoxContent}>
                 <figure className={styles.uploadFileIcon}>
                     <img src={uploadFileIcon} alt="Ícone de enviar arquivo" />
                 </figure>
+                <BackButton backToHome={backToHome}/>
                 <div className={styles.text}>
                     <h2>Adicione sua Tabela</h2>
                     <figure className={styles.attachFileAddIcon}>

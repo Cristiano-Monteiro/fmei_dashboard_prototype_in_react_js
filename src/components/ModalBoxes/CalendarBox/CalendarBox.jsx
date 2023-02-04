@@ -1,17 +1,18 @@
 import styles from './CalendarBox.module.css';
 
+import BackButton from '../../Layout/BackButton/BackButton';
+
 import dateRangeIcon from '../../../assets/icons/date_range_icon.svg';
-
 import doneIcon from '../../../assets/icons/done_outline_icon.svg';
-import backIcon from '../../../assets/icons/arrow_back_icon.svg';
 
-function CalendarBox(){
+function CalendarBox({ backToHome }){
     return(
         <div className={styles.calendarBoxContainer}>
             <div className={styles.calendarBoxContent}>
-                <figure>
+                <figure className={styles.dateRangeIconContainer}>
                     <img src={dateRangeIcon} alt="Ícone de intervalo de datas" />
                 </figure>
+                <BackButton backToHome={backToHome}/>
                 <h2>Filtre suas informações</h2>
                 <div className={styles.inputDateContainer}>
                     <form action='#' method='post'>

@@ -44,8 +44,8 @@ function App() {
         showCalendarBox={showCalendarBox}
         backToHome={backToHome}
       />
-      {inputFileBox && <InputFileBox/>}
-      {calendarBox && <CalendarBox/>}
+      {inputFileBox && <InputFileBox backToHome={backToHome}/>}
+      {calendarBox && <CalendarBox backToHome={backToHome}/>}
     </Container>
   );
 };
