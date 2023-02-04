@@ -1,10 +1,10 @@
 import styles from './InputFileBox.module.css';
 
 import BackButton from '../../Layout/BackButton/BackButton';
+import SubmitButton from '../../Layout/SubmitButton/SubmitButton';
 
 import uploadFileIcon from '../../../assets/icons/upload_file_icon.svg';
 import attachFileAddIcon from '../../../assets/icons/attach_file_add_icon.svg';
-import doneIcon from '../../../assets/icons/done_outline_icon.svg';
 
 function InputFileBox({ backToHome }){
     return(
@@ -26,9 +26,7 @@ function InputFileBox({ backToHome }){
                         name="dataTable" 
                         id="fileInput"
                     />
-                    <button type="submit">
-                        <img src={doneIcon} alt="Ícone de finalizar ou terminar uma ação" />
-                    </button>
+                    <SubmitButton/>
                 </form>
             </div>
         </div>

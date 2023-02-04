@@ -1,9 +1,9 @@
 import styles from './CalendarBox.module.css';
 
 import BackButton from '../../Layout/BackButton/BackButton';
+import SubmitButton from '../../Layout/SubmitButton/SubmitButton';
 
 import dateRangeIcon from '../../../assets/icons/date_range_icon.svg';
-import doneIcon from '../../../assets/icons/done_outline_icon.svg';
 
 function CalendarBox({ backToHome }){
     return(
@@ -18,9 +18,7 @@ function CalendarBox({ backToHome }){
                     <form action='#' method='post'>
                         <input type="date" name="inputDateStart" id="inputDateStart" />
                         <input type="date" name="inputDateEnd" id="inputDateEnd" />
-                        <button type="submit">
-                            <img src={doneIcon} alt="Ícone de finalizar ou terminar uma ação" />
-                        </button>
+                        <SubmitButton/>
                     </form>
                 </div>
             </div>
