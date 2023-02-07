@@ -1,27 +1,10 @@
 .chartContainer{
     width: 100%;
     height: 100%;
-    padding: .5rem 0;
     display: flex;
     flex-direction: column;
     opacity: 0;
     animation: chartContainerAnimation 1.1s ease-in-out .3s forwards;
-}
-
-.text{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: .1rem 1rem;
-    color: #555;
-    font-size: 1.5rem;
-}
-
-.text img{
-    height: 65%;
-    min-height: 1rem;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
 }
 
 .charts{
@@ -71,26 +54,20 @@
 @media screen and (min-width: 805px) {
     .chartContainer{
         padding: 0;
-        padding-top: .5rem;
         min-height: 45rem;
-    }
-
-    .text{
-        font-size: 1.2rem;
     }
 
     .charts{
         flex-wrap: wrap;
         justify-content: center;
         gap: .8rem;
-        padding: 0 1rem 1rem 1rem;
         overflow-y: auto;
     }
 
     .chart{
         width: 49%;
         min-width: 0;
-        height: 60%;
+        height: 49%;
     }
 
     .chart:first-child{
@@ -102,10 +79,10 @@
     }
 }
 
-@media screen and (min-width: 1124px) {
+/* @media screen and (min-width: 1124px) {
     .chart{
         height: 95%;
         padding-bottom: 2.1rem;
         overflow: hidden;
     }
-}
+} */

@@ -33,10 +33,6 @@ function FinancialInformation(){
     return(
         <>
             <section className={styles.financialInformationContainer}>
-                <div className={styles.text}>
-                    <img src={statsIcon} alt="Ícone da seção de informações" />
-                    <h1>Informações</h1>
-                </div>
                 <div className={styles.financialInformationWrapper}>
                     {FinancialChartData.map((data) => {
                         return(

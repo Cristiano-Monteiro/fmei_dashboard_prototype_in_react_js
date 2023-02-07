@@ -12,7 +12,7 @@ function OpeningScreen({ showMainContent }){
 
     setTimeout(() => {
         document.getElementById('startBttn').style.opacity = '1';
-    }, 2000);
+    }, 1500);
 
     return(
         <div className={styles.openingScreenContainer} id='openingScreen'>

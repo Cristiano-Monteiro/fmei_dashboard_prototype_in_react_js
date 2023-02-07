@@ -13,10 +13,6 @@ function MainCharts(){
     return(
         <>
             <section className={styles.chartContainer}>
-                <div className={styles.text}>
-                    <img src={barChartIcon} alt="Ícone para a seção de gráficos" />
-                    <h1>Gráficos</h1>
-                </div>
                 <div className={styles.charts}>
                     {chartList.map((options) => {
                         return (
