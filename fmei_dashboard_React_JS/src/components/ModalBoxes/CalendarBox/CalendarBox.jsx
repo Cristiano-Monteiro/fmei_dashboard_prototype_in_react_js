@@ -16,8 +16,18 @@ function CalendarBox({ backToHome }){
                 <h2>Filtre suas informações</h2>
                 <div className={styles.inputDateContainer}>
                     <form action='#' method='post'>
-                        <input type="date" name="inputDateStart" id="inputDateStart" />
-                        <input type="date" name="inputDateEnd" id="inputDateEnd" />
+                        <input 
+                            type="date" 
+                            name="inputDateStart" 
+                            id="inputDateStart"
+                            required
+                        />
+                        <input 
+                            type="date" 
+                            name="inputDateEnd" 
+                            id="inputDateEnd"
+                            required
+                        />
                         <SubmitButton/>
                     </form>
                 </div>

@@ -25,6 +25,7 @@ function InputFileBox({ backToHome }){
                         type="file" 
                         name="dataTable" 
                         id="fileInput"
+                        required
                     />
                     <SubmitButton/>
                 </form>

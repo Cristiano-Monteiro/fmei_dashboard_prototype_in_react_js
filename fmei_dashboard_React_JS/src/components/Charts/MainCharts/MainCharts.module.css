@@ -29,7 +29,7 @@
     text-align: center;
     border-radius: var(--main-border-radius);
     background-color: #fff;
-
+    overflow: hidden;
     scroll-snap-align: center;
 }
 
