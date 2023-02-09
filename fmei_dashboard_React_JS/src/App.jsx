@@ -24,7 +24,7 @@ function App() {
     setCalendarBox(!calendarBox);
     setInputFileBox(false);
   };
-
+  
   function backToHome(){
     setInputFileBox(false);
     setCalendarBox(false);
