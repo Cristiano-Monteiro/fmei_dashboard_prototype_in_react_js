@@ -7,30 +7,27 @@ import OpeningScreen from './components/ModalBoxes/OpeningScreen/OpeningScreen';
 import MainNavbar from './components/Navbar/MainNavbar/MainNavbar';
 import MobileNavbar from './components/Navbar/MobileNavbar/MobileNavbar';
 
-import InputFileBox from './components/ModalBoxes/InputFileBox/InputFileBox';
-import CalendarBox from './components/ModalBoxes/CalendarBox/CalendarBox';
+import ModalBox from './components/ModalBoxes/ModalBox/ModalBox';
 
-function App() {
-  const [inputFileBox, setInputFileBox] = useState(false);
-  const [calendarBox, setCalendarBox] = useState(false);
+export default function App() {
   const [mainContent, setMainContent] = useState(false);
+  const [idModal, setIdModal] = useState('');
 
-  function showInputFileBox(){
-    setInputFileBox(!inputFileBox);
-    setCalendarBox(false);
-  };
-
-  function showCalendarBox(){
-    setCalendarBox(!calendarBox);
-    setInputFileBox(false);
-  };
-  
   function backToHome(){
-    setInputFileBox(false);
-    setCalendarBox(false);
+    setIdModal('Home');
   };
 
-  const showMainContent = () => setMainContent(true);
+  function selectedModalBox(e){
+    if(idModal === e.target.parentNode.id){
+      setIdModal('Home');
+    } else {
+      setIdModal(e.target.parentNode.id);
+    };
+  };
+
+  function showMainContent(){
+    setMainContent(true);
+  };
 
   return (
     <Container>
@@ -40,14 +37,12 @@ function App() {
       <MobileNavbar/>
       {mainContent && <MainContent/>}
       <MainNavbar
-        showInputFileBox={showInputFileBox}
-        showCalendarBox={showCalendarBox}
+        selectedModalBox={selectedModalBox}
+      />
+      <ModalBox 
+        idModal={idModal}
         backToHome={backToHome}
       />
-      {inputFileBox && <InputFileBox backToHome={backToHome}/>}
-      {calendarBox && <CalendarBox backToHome={backToHome}/>}
     </Container>
   );
 };
-
-export default App;

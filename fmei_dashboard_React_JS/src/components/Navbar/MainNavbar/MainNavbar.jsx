@@ -4,7 +4,7 @@ import NavbarButtons from '../NavbarButtons/NavbarButtons';
 
 import logoFmei from '../../../assets/imgs/logo-transp-fmei.png';
 
-function MainNavbar({showInputFileBox, showCalendarBox, backToHome}){
+export default function MainNavbar({selectedModalBox}){
     return(
         <nav className={styles.mainNavbar}>
             <figure>
@@ -12,13 +12,9 @@ function MainNavbar({showInputFileBox, showCalendarBox, backToHome}){
             </figure> 
             <div className={styles.navbarButtons}>
                 <NavbarButtons
-                    showInputFileBox={showInputFileBox}
-                    showCalendarBox={showCalendarBox}
-                    backToHome={backToHome}
+                    selectedModalBox={selectedModalBox}
                 />
             </div>
         </nav>
     );
 };
-
-export default MainNavbar;

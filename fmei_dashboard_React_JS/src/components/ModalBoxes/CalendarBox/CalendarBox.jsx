@@ -5,7 +5,7 @@ import SubmitButton from '../../Layout/SubmitButton/SubmitButton';
 
 import dateRangeIcon from '../../../assets/icons/date_range_icon.svg';
 
-function CalendarBox({ backToHome }){
+export default function CalendarBox({ backToHome }){
     return(
         <div className={styles.calendarBoxContainer}>
             <div className={styles.calendarBoxContent}>
@@ -35,5 +35,3 @@ function CalendarBox({ backToHome }){
         </div>
     );
 };
-
-export default CalendarBox;

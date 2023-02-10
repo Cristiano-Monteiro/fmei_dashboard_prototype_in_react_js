@@ -6,7 +6,7 @@ import SubmitButton from '../../Layout/SubmitButton/SubmitButton';
 import uploadFileIcon from '../../../assets/icons/upload_file_icon.svg';
 import attachFileAddIcon from '../../../assets/icons/attach_file_add_icon.svg';
 
-function InputFileBox({ backToHome }){
+export default function InputFileBox({ backToHome }){
     return(
         <div className={styles.inputFileBoxContainer}>
             <div className={styles.inputFileBoxContent}>
@@ -33,5 +33,3 @@ function InputFileBox({ backToHome }){
         </div>
     );
 };
-
-export default InputFileBox;

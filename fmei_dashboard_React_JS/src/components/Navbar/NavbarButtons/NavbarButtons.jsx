@@ -4,25 +4,22 @@ import homeIcon from '../../../assets/icons/home_icon.svg';
 import calendarIcon from '../../../assets/icons/calendar_icon.svg';
 import addIcon from '../../../assets/icons/add_icon.svg';
 
-function NavbarButtons({showInputFileBox, showCalendarBox, backToHome}){
+export default function NavbarButtons({selectedModalBox}){
     const navbarButtonsData = [
         {
-            onClickEvent: backToHome,
             srcIcon: homeIcon,
             altIcon: 'Ícone de início',
-            key: 1
+            id: 'Home'
         },
         {
-            onClickEvent: showInputFileBox,
             srcIcon: addIcon,
             altIcon: 'Ícone de adição da tabela de dados',
-            key: 2
+            id: 'InputFile'
         },
         {
-            onClickEvent: showCalendarBox,
             srcIcon: calendarIcon,
             altIcon: 'Ícone de calendário',
-            key: 3
+            id: 'Calendar'
         }
     ];
 
@@ -30,9 +27,9 @@ function NavbarButtons({showInputFileBox, showCalendarBox, backToHome}){
         <ul className={styles.navbarButtons}>
             {navbarButtonsData.map((data) => {
                 return(
-                    <li onClick={data.onClickEvent} key={data.key}>
+                    <li onClick={selectedModalBox} key={data.id} id={data.id}>
                         <img 
-                            src={data.srcIcon} 
+                            src={data.srcIcon}
                             alt={data.altIcon}
                         />
                     </li>
@@ -41,5 +38,3 @@ function NavbarButtons({showInputFileBox, showCalendarBox, backToHome}){
         </ul>
     );
 };
-
-export default NavbarButtons;
