@@ -11,7 +11,7 @@ import ModalBox from './components/ModalBoxes/ModalBox/ModalBox';
 
 export default function App() {
   const [mainContent, setMainContent] = useState(false);
-  const [idModal, setIdModal] = useState('');
+  const [idModal, setIdModal] = useState('Home');
 
   function backToHome(){
     setIdModal('Home');
@@ -38,6 +38,7 @@ export default function App() {
       {mainContent && <MainContent/>}
       <MainNavbar
         selectedModalBox={selectedModalBox}
+        idModal={idModal}
       />
       <ModalBox 
         idModal={idModal}

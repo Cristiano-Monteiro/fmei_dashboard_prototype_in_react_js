@@ -4,7 +4,7 @@ import homeIcon from '../../../assets/icons/home_icon.svg';
 import calendarIcon from '../../../assets/icons/calendar_icon.svg';
 import addIcon from '../../../assets/icons/add_icon.svg';
 
-export default function NavbarButtons({selectedModalBox}){
+export default function NavbarButtons({selectedModalBox, idModal}){
     const navbarButtonsData = [
         {
             srcIcon: homeIcon,
@@ -27,7 +27,12 @@ export default function NavbarButtons({selectedModalBox}){
         <ul className={styles.navbarButtons}>
             {navbarButtonsData.map((data) => {
                 return(
-                    <li onClick={selectedModalBox} key={data.id} id={data.id}>
+                    <li 
+                        onClick={selectedModalBox} 
+                        key={data.id} 
+                        id={data.id}
+                        className={(data.id === idModal) ? styles.active : styles.notActive}
+                    >
                         <img 
                             src={data.srcIcon}
                             alt={data.altIcon}

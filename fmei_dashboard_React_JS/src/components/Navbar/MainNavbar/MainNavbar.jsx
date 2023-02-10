@@ -4,7 +4,7 @@ import NavbarButtons from '../NavbarButtons/NavbarButtons';
 
 import logoFmei from '../../../assets/imgs/logo-transp-fmei.png';
 
-export default function MainNavbar({selectedModalBox}){
+export default function MainNavbar({selectedModalBox, idModal}){
     return(
         <nav className={styles.mainNavbar}>
             <figure>
@@ -13,6 +13,7 @@ export default function MainNavbar({selectedModalBox}){
             <div className={styles.navbarButtons}>
                 <NavbarButtons
                     selectedModalBox={selectedModalBox}
+                    idModal={idModal}
                 />
             </div>
         </nav>

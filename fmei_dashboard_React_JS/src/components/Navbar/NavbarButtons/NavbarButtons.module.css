@@ -19,7 +19,16 @@
 }
 
 .navbarButtons li:hover{
+    transition: filter .3s ease-in-out;
+    filter: brightness(.8);
+}
+
+.active{
     background-color: var(--secondary-color);
+}
+
+.notActive{
+    background-color: var(--main-color);
 }
 
 @keyframes btnAnimation{
@@ -34,18 +43,6 @@
     }
 }
 
-@keyframes btnAnimationDesktop {
-    0%{
-        transform: translateX(0px);    
-    }
-    50%{
-        transform: translateX(15px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-
 @media screen and (min-width: 805px) {
     .navbarButtons{
         flex-direction: column;
@@ -57,18 +54,10 @@
 
     .navbarButtons li{
         height: auto;
-        border-radius: 50%;
+        border-radius: var(--main-border-radius);
     }
 
     .navbarButtons li img:hover{
         animation: btnAnimation .5s ease-in-out;
-    }
-
-    .navbarButtons li:hover{
-        background-color: var(--secondary-color);
-    }
-
-    .navbarButtons li:active{
-        animation: btnAnimationDesktop .25s ease-in-out;
     }
 }
