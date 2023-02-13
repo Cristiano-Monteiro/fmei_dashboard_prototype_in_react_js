@@ -15,7 +15,6 @@
 
 .navbarButtons li img{
     width: 100%;
-    animation: btnAnimation .5s ease-in-out;
 }
 
 .navbarButtons li:hover{
@@ -31,18 +30,6 @@
     background-color: var(--main-color);
 }
 
-@keyframes btnAnimation{
-    0%{
-        transform: translateY(0px);    
-    }
-    50%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
 @media screen and (min-width: 805px) {
     .navbarButtons{
         flex-direction: column;
@@ -55,9 +42,5 @@
     .navbarButtons li{
         height: auto;
         border-radius: var(--main-border-radius);
-    }
-
-    .navbarButtons li img:hover{
-        animation: btnAnimation .5s ease-in-out;
     }
 }

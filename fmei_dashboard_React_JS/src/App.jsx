@@ -30,20 +30,24 @@ export default function App() {
   };
 
   return (
-    <Container>
+    <>
       <OpeningScreen 
         showMainContent={showMainContent}
       />
-      <MobileNavbar/>
-      {mainContent && <MainContent/>}
-      <MainNavbar
-        selectedModalBox={selectedModalBox}
-        idModal={idModal}
-      />
-      <ModalBox 
-        idModal={idModal}
-        backToHome={backToHome}
-      />
-    </Container>
+      {mainContent && (
+        <Container>
+          <MobileNavbar/>
+          <MainContent/>
+          <MainNavbar
+            selectedModalBox={selectedModalBox}
+            idModal={idModal}
+          />
+          <ModalBox 
+            idModal={idModal}
+            backToHome={backToHome}
+          />
+        </Container>
+      )}
+    </>
   );
 };

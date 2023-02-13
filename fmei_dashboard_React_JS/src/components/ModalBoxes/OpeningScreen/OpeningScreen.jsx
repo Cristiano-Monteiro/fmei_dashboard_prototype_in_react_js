@@ -6,13 +6,9 @@ import upArrowIcon from '../../../assets/icons/up_arrow_icon.svg';
 
 function OpeningScreen({ showMainContent }){
     const closeOpeningScreen = () => {
-        document.getElementById('openingScreen').style.transform = 'translateY(-100vh)';
+        document.getElementById('openingScreen').style.display = 'none';
         showMainContent();
     };
-
-    setTimeout(() => {
-        document.getElementById('startBttn').style.opacity = '1';
-    }, 1500);
 
     return(
         <div className={styles.openingScreenContainer} id='openingScreen'>

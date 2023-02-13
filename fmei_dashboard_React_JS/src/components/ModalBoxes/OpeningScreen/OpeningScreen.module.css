@@ -8,7 +8,7 @@
     position: absolute;
     background-color: var(--main-color);
     z-index: 2;
-    transition: transform .6s ease-in-out;
+    transition: opacity .5s ease;
 }
 
 .openingScreenContent{
@@ -46,10 +46,10 @@
     height: 8rem;
     position: absolute;
     bottom: 2rem;
-    opacity: 0;
     transition: opacity .5s ease-in-out;
-    animation: buttonBouncing 1s ease-out 1s alternate infinite;
     overflow: hidden;
+    opacity: 0;
+    animation: animationOpeningScreenContent .7s ease-in-out 1.5s forwards;
 }
 
 .openingScreenContainer .startButton img{
@@ -63,12 +63,6 @@
     to{
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes buttonBouncing {
-    to{
-        transform: translateY(-2rem);
     }
 }
 
