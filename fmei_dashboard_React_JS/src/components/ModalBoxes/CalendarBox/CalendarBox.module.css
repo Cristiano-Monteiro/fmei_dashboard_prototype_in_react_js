@@ -30,8 +30,6 @@
     width: 9rem;
     position: absolute;
     top: -3.5rem;
-
-    animation: CalendarBoxAnimation .8s ease-in-out;
 }
 
 .dateRangeIconContainer img{

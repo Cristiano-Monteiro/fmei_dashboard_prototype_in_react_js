@@ -5,15 +5,13 @@
     display: flex;
     flex-direction: column;
     background-color: var(--main-color);
-    transform: scale(1.05);
-    animation: containerAnimation .5s ease forwards;
-/*     display: grid;
-    grid-template-rows: .1fr 1fr .1fr; */
+    opacity: 0;
+    animation: containerAnimation .7s ease-in-out forwards;
 }
 
 @keyframes containerAnimation {
     to{
-        transform: scale(1);
+        opacity: 1;
     }
 }
 
