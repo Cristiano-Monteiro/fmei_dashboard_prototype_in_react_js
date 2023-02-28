@@ -49,7 +49,7 @@
     transition: opacity .5s ease-in-out;
     overflow: hidden;
     opacity: 0;
-    animation: animationOpeningScreenContent .7s ease-in-out 1.5s forwards;
+    animation: startButtonAnimation 1s ease-in 1.5s infinite alternate;
 }
 
 .openingScreenContainer .startButton img{
@@ -63,6 +63,17 @@
     to{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes startButtonAnimation {
+    from{
+        opacity: 1;
+        transform: translate3d(0, -15px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 15px, 0);
     }
 }
 
@@ -91,9 +102,5 @@
         transition: .3s ease-in-out;
         width: 7rem;
         height: 6rem;
-    }
-
-    .openingScreenContainer .startButton:hover{
-        background-color: var(--secondary-color);
     }
 }

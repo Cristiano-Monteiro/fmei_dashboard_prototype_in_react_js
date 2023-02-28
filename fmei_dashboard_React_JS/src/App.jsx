@@ -7,8 +7,6 @@ import OpeningScreen from './components/ModalBoxes/OpeningScreen/OpeningScreen';
 import MainNavbar from './components/Navbar/MainNavbar/MainNavbar';
 import MobileNavbar from './components/Navbar/MobileNavbar/MobileNavbar';
 
-import ModalBox from './components/ModalBoxes/ModalBox/ModalBox';
-
 export default function App() {
   const [mainContent, setMainContent] = useState(false);
   const [idModal, setIdModal] = useState('Home');
@@ -37,14 +35,13 @@ export default function App() {
       {mainContent && (
         <Container>
           <MobileNavbar/>
-          <MainContent/>
+          <MainContent 
+            idModal={idModal}
+            backToHome={backToHome}
+          />
           <MainNavbar
             selectedModalBox={selectedModalBox}
             idModal={idModal}
-          />
-          <ModalBox 
-            idModal={idModal}
-            backToHome={backToHome}
           />
         </Container>
       )}
