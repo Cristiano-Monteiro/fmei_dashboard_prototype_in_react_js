@@ -10,10 +10,6 @@
     transition: background-color .3s ease-in-out;
 }
 
-.backIcon:hover{
-    background-color: var(--secondary-color);
-}
-
 .backIcon img{
     width: 100%;
 }
