@@ -1,0 +1,112 @@
+.inputFileBoxContainer{
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputFileBoxContent{
+    width: 90%;
+    max-width: 40rem;
+    height: 30rem;
+    padding: 4rem 1rem;
+    border-radius: var(--main-border-radius);
+    background-color: var(--main-color);
+    animation: inputFileBoxAnimation .5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    position: relative;
+}
+
+/*== Icons styles ==*/
+
+.uploadFileIcon{
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -3.5rem;
+}
+
+.uploadFileIcon img{
+    width: 100%;
+}
+
+.attachFileAddIcon{
+    width: 100%;
+    max-width: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.attachFileAddIcon img{
+    width: 100%;
+}
+
+/*==================*/
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #fff;
+}
+
+.text h2{
+    color: #fff;
+    text-align: center;
+    font-size: 5vw;
+}
+
+.inputFileBoxContent form{
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.inputFileBoxContent form input{
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--main-border-radius);
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+@keyframes inputFileBoxAnimation {
+    from{
+        opacity: 0;
+        transform: translate(0, -3rem);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .text h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 805px) {
+    .inputFileBoxContainer{
+        border-radius: var(--main-border-radius) 0 0 var(--main-border-radius);
+    }
+
+    .inputFileBoxContent{
+        right: 4rem;
+    }
+}

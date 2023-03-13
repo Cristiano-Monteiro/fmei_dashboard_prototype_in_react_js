@@ -1,0 +1,46 @@
+.navbarButtons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.navbarButtons li{
+    cursor: pointer;
+    width: 5rem;
+    height: 100%;
+    padding: .8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.navbarButtons li img{
+    width: 100%;
+}
+
+.navbarButtons li:hover{
+    transition: filter .3s ease-in-out;
+    filter: brightness(.8);
+}
+
+.active{
+    background-color: var(--secondary-color);
+}
+
+.notActive{
+    background-color: var(--main-color);
+}
+
+@media screen and (min-width: 805px) {
+    .navbarButtons{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .navbarButtons li{
+        height: auto;
+        border-radius: var(--main-border-radius);
+    }
+}
