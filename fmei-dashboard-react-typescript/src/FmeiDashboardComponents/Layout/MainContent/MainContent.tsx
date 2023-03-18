@@ -5,7 +5,12 @@ import MainCharts from '../../Charts/MainCharts/MainCharts';
 
 import ModalBox from '../../ModalBoxes/ModalBox/ModalBox';
 
-function MainContent({ idModal, backToHome }){
+interface MainContentProps{
+    idModal: string,
+    backToHome: () => void,
+};
+
+function MainContent({ idModal, backToHome }: MainContentProps){
     return(
         <div className={styles.mainContent}>
             <FinancialInformation/>

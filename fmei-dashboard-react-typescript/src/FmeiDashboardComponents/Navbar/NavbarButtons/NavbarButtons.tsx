@@ -1,10 +1,18 @@
-import styles from './NavbarButtons.module.css';
+import { 
+    NavbarList,
+    NavbarItens,
+} from './NavbarButtons.styles';
 
-import homeIcon from '../../../assets/icons/home_icon.svg';
-import calendarIcon from '../../../assets/icons/calendar_icon.svg';
-import addIcon from '../../../assets/icons/add_icon.svg';
+import homeIcon from '../../FmeiDashboardAssets/icons/home_icon.svg';
+import calendarIcon from '../../FmeiDashboardAssets/icons/calendar_icon.svg';
+import addIcon from '../../FmeiDashboardAssets/icons/add_icon.svg';
 
-export default function NavbarButtons({selectedModalBox, idModal}){
+interface NavbarButtonsProps{
+    selectedModalBox: any,
+    idModal: any,
+};
+
+export default function NavbarButtons({selectedModalBox, idModal}: NavbarButtonsProps){
     const navbarButtonsData = [
         {
             srcIcon: homeIcon,
@@ -24,22 +32,23 @@ export default function NavbarButtons({selectedModalBox, idModal}){
     ];
 
     return(
-        <ul className={styles.navbarButtons}>
+        <NavbarList>
             {navbarButtonsData.map((data) => {
                 return(
-                    <li 
+                    <NavbarItens 
                         onClick={selectedModalBox} 
                         key={data.id} 
                         id={data.id}
-                        className={(data.id === idModal) ? styles.active : styles.notActive}
+                        idModal={idModal}
+                        dataId={data.id}
                     >
                         <img 
                             src={data.srcIcon}
                             alt={data.altIcon}
                         />
-                    </li>
+                    </NavbarItens>
                 );
             })}
-        </ul>
+        </NavbarList>
     );
 };

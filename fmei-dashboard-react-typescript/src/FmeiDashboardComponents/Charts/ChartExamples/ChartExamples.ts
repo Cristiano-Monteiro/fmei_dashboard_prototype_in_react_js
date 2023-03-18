@@ -22,7 +22,7 @@ let pie_data = [
 
 /*=== Chart configs ===*/
 
-function generate_options_for_chart(type_chart, series_data){
+function generate_options_for_chart(type_chart: string, series_data: object[]){
     let option = {
         chart: {
             type: type_chart

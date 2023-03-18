@@ -1,4 +1,6 @@
-.backIcon{
+import styled from "styled-components";
+
+export const BackIcon = styled.figure`
     width: 5rem;
     display: flex;
     border-radius: 50%;
@@ -8,15 +10,13 @@
     left: .5rem;
     cursor: pointer;
     transition: background-color .3s ease-in-out;
-}
 
-.backIcon img{
-    width: 100%;
-}
+    img{
+        width: 100%;
+    }
 
-@media screen and (min-width: 805px) {
-    .backIcon{
+    @media screen and (min-width: 805px){
         width: 4rem;
         padding: .3rem;
     }
-}
+`;

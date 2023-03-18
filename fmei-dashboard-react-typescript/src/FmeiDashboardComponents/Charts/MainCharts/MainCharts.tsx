@@ -3,29 +3,27 @@ import HighchartsReact from 'highcharts-react-official';
 import HighchartsExporting from "highcharts/modules/exporting";
 HighchartsExporting(Highcharts);
 
-import styles from './MainCharts.module.css';
-
-import barChartIcon from '../../../assets/icons/bar_chart.svg';
+import { ChartContainer, Charts } from './MainCharts.styles';
 
 import chartList from '../ChartExamples/ChartExamples';
 
 function MainCharts(){
     return(
         <>
-            <section className={styles.chartContainer}>
-                <div className={styles.charts}>
-                    {chartList.map((options) => {
+            <ChartContainer>
+                <Charts>
+                    {chartList.map((options: any) => {
                         return (
                             <HighchartsReact
                                 highcharts={Highcharts}
                                 options={options}
-                                containerProps={{className: styles.chart}}
+                                containerProps={{className: 'chart'}}
                                 key={options.key}
                             />
                         )
                     })}
-                </div>
-            </section>
+                </Charts>
+            </ChartContainer>
         </>
     );
 };

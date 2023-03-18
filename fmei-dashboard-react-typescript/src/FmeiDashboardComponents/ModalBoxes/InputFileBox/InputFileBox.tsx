@@ -1,16 +1,26 @@
-import styles from './InputFileBox.module.css';
+import { 
+    AttachFileAddIcon, 
+    InputFileBoxContainer, 
+    InputFileBoxContent, 
+    TextContainer, 
+    UploadFileIcon,
+} from './InputFileBox.styles';
 
 import BackButton from '../../Layout/BackButton/BackButton';
 import SubmitButton from '../../Layout/SubmitButton/SubmitButton';
 
-import uploadFileIcon from '../../../assets/icons/upload_file_icon.svg';
-import attachFileAddIcon from '../../../assets/icons/attach_file_add_icon.svg';
+import uploadFileIcon from '../../FmeiDashboardAssets/icons/upload_file_icon.svg';
+import attachFileAddIcon from '../../FmeiDashboardAssets/icons/attach_file_add_icon.svg';
 
-export default function InputFileBox({ backToHome }){
+interface InputFileBoxProps{
+    backToHome: () => void,
+};
+
+export default function InputFileBox({ backToHome }: InputFileBoxProps){
     function handleFileSubmit(){
-        const inputFile = document.getElementById("fileInput");
-
-        const file = inputFile.files[0];
+        const inputFile = document.getElementById("fileInput") as HTMLInputElement;
+        
+        const file = inputFile.files![0];
         
         if(file != undefined){
             const formData = new FormData();
@@ -35,18 +45,18 @@ export default function InputFileBox({ backToHome }){
     };
 
     return(
-        <div className={styles.inputFileBoxContainer}>
-            <div className={styles.inputFileBoxContent}>
-                <figure className={styles.uploadFileIcon}>
+        <InputFileBoxContainer>
+            <InputFileBoxContent>
+                <UploadFileIcon>
                     <img src={uploadFileIcon} alt="Ícone de enviar arquivo" />
-                </figure>
+                </UploadFileIcon>
                 <BackButton backToHome={backToHome}/>
-                <div className={styles.text}>
+                <TextContainer>
                     <h2>Adicione sua Tabela</h2>
-                    <figure className={styles.attachFileAddIcon}>
+                    <AttachFileAddIcon>
                         <img src={attachFileAddIcon} alt="Ícone de anexar arquivo" />
-                    </figure>
-                </div>
+                    </AttachFileAddIcon>
+                </TextContainer>
                 <form 
                     method="post" 
                     encType='multipart/form-data' 
@@ -60,7 +70,7 @@ export default function InputFileBox({ backToHome }){
                     />
                     <SubmitButton handleFileSubmit={handleFileSubmit}/>
                 </form>
-            </div>
-        </div>
+            </InputFileBoxContent>
+        </InputFileBoxContainer>
     );
 };

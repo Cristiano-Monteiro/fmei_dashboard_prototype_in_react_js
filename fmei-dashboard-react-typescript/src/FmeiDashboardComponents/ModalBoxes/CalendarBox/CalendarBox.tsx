@@ -1,11 +1,15 @@
 import styles from './CalendarBox.module.css';
 
 import BackButton from '../../Layout/BackButton/BackButton';
-import SubmitButton from '../../Layout/SubmitButton/SubmitButton';
+import SubmitButton from '../../Layout//SubmitButton/SubmitButton';
 
-import dateRangeIcon from '../../../assets/icons/date_range_icon.svg';
+import dateRangeIcon from '../../FmeiDashboardAssets/icons/date_range_icon.svg';
 
-export default function CalendarBox({ backToHome }){
+interface CalendarBoxProps{
+    backToHome: () => void,
+};
+
+export default function CalendarBox({ backToHome }: CalendarBoxProps){
     return(
         <div className={styles.calendarBoxContainer}>
             <div className={styles.calendarBoxContent}>

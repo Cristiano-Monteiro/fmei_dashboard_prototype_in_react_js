@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { GlobalStyle } from "../Global";
 
-import { OpeningScreen } from "../ModalBoxes/OpeningScreen/OpeningScreen";
-
 import { FmeiDashboardContainer, MobileNavbar } from "./FmeiDashboard.styles";
+
+import { OpeningScreen } from "../ModalBoxes/OpeningScreen/OpeningScreen";
+import MainContent from "../Layout/MainContent/MainContent";
+import MainNavbar from "../Navbar/MainNavbar/MainNavbar";
 
 import logoFmei from '../FmeiDashboardAssets/imgs/logo-transp-fmei.png';
 
@@ -44,6 +46,7 @@ export default function FmeiDashboard(){
                         idModal={idModal}
                         backToHome={backToHome}
                     />
+
                     <MainNavbar
                         selectedModalBox={selectedModalBox}
                         idModal={idModal}

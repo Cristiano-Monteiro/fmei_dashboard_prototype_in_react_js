@@ -1,8 +1,12 @@
 import styles from './SubmitButton.module.css';
 
-import doneIcon from '../../../assets/icons/done_outline_icon.svg';
+import doneIcon from '../../FmeiDashboardAssets/icons/done_outline_icon.svg';
 
-const SubmitButton = ({ handleFileSubmit }) => {
+interface SubmitButtonProps{
+    handleFileSubmit: () => void,
+};
+
+const SubmitButton = ({ handleFileSubmit }: SubmitButtonProps) => {
     return(
         <button
             className={styles.SubmitButton}
