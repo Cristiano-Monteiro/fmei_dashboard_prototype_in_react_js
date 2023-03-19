@@ -41,12 +41,10 @@ export default function FmeiDashboard(){
                             <img src={logoFmei} alt="Logo do FacilitaMEI" />
                         </figure>
                     </MobileNavbar>
-
                     <MainContent
                         idModal={idModal}
                         backToHome={backToHome}
                     />
-
                     <MainNavbar
                         selectedModalBox={selectedModalBox}
                         idModal={idModal}

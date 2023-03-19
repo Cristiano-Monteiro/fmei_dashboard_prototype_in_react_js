@@ -1,4 +1,4 @@
-import styles from './MainContent.module.css';
+import { MainPageContent } from './MainContent.styles';
 
 import FinancialInformation from '../../Charts/FinancialInformation/FinancialInformation';
 import MainCharts from '../../Charts/MainCharts/MainCharts';
@@ -12,14 +12,14 @@ interface MainContentProps{
 
 function MainContent({ idModal, backToHome }: MainContentProps){
     return(
-        <div className={styles.mainContent}>
+        <MainPageContent>
             <FinancialInformation/>
             <MainCharts/>
             <ModalBox 
                 idModal={idModal}
                 backToHome={backToHome}
             />
-        </div>
+        </MainPageContent>
     );
 };
 

@@ -1,7 +1,12 @@
-import styles from './CalendarBox.module.css';
+import { 
+    CalendarBoxContainer, 
+    CalendarBoxContent, 
+    DateRangeIconContainer, 
+    InputDateContainer 
+} from './CalendarBox.styles';
 
 import BackButton from '../../Layout/BackButton/BackButton';
-import SubmitButton from '../../Layout//SubmitButton/SubmitButton';
+import SubmitButton from '../../Layout/SubmitButton/SubmitButton';
 
 import dateRangeIcon from '../../FmeiDashboardAssets/icons/date_range_icon.svg';
 
@@ -11,14 +16,14 @@ interface CalendarBoxProps{
 
 export default function CalendarBox({ backToHome }: CalendarBoxProps){
     return(
-        <div className={styles.calendarBoxContainer}>
-            <div className={styles.calendarBoxContent}>
-                <figure className={styles.dateRangeIconContainer}>
+        <CalendarBoxContainer>
+            <CalendarBoxContent>
+                <DateRangeIconContainer>
                     <img src={dateRangeIcon} alt="Ícone de intervalo de datas" />
-                </figure>
+                </DateRangeIconContainer>
                 <BackButton backToHome={backToHome}/>
                 <h2>Filtre suas informações</h2>
-                <div className={styles.inputDateContainer}>
+                <InputDateContainer>
                     <form action='#' method='post'>
                         <input 
                             type="date" 
@@ -34,8 +39,8 @@ export default function CalendarBox({ backToHome }: CalendarBoxProps){
                         />
                         <SubmitButton/>
                     </form>
-                </div>
-            </div>
-        </div>
+                </InputDateContainer>
+            </CalendarBoxContent>
+        </CalendarBoxContainer>
     );
 };

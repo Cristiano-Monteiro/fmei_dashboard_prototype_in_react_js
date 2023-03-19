@@ -1,4 +1,6 @@
-.SubmitButton{
+import styled from "styled-components";
+
+export const SubmitBttn = styled.button`
     width: 100%;
     height: 6rem;
     border-radius: var(--main-border-radius);
@@ -6,8 +8,8 @@
     border: none;
     cursor: pointer;
     transition: background-color .4s ease-in-out;
-}
 
-.SubmitButton:hover{
-    background-color: var(--secondary-color);
-}
+    &:hover{
+        background-color: var(--secondary-color);
+    }
+`;

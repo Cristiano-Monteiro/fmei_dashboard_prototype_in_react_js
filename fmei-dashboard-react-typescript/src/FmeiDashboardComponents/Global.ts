@@ -14,6 +14,9 @@ export const GlobalStyle = createGlobalStyle`
         /*== project colors ==*/
         --main-color: #0B0F99;
         --secondary-color: #1016E0;
+        --white: #fff;
+        --black: #000;
+        --light-gray: #e1e3ed;
 
         --main-border-radius: 2rem;
     }

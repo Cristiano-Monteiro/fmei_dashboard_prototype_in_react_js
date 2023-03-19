@@ -1,20 +1,19 @@
-import styles from './SubmitButton.module.css';
+import { SubmitBttn } from './SubmitButton.styles';
 
 import doneIcon from '../../FmeiDashboardAssets/icons/done_outline_icon.svg';
 
 interface SubmitButtonProps{
-    handleFileSubmit: () => void,
+    handleFileSubmit?: () => void,
 };
 
-const SubmitButton = ({ handleFileSubmit }: SubmitButtonProps) => {
+function SubmitButton ({ handleFileSubmit }: SubmitButtonProps){
     return(
-        <button
-            className={styles.SubmitButton}
+        <SubmitBttn
             type="button"
             onClick={handleFileSubmit}
         >
             <img src={doneIcon} alt="Ícone de finalizar ou terminar uma ação" />
-        </button>
+        </SubmitBttn>
     );
 };
 
